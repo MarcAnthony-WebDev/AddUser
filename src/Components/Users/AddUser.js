@@ -3,6 +3,7 @@ import styles from './AddUser.module.css';
 
 import Card from '../UI/Card';
 import Button from '../UI/Button';
+import Wrapper from '../Helpers/Wrapper';
 import ErrorModal from '../UI/ErrorModal';
 // import { getByLabelText } from '@testing-library/dom';
 //? I don't think I need this above but just in case commented it out.
@@ -45,7 +46,7 @@ const AddUser = (props) => {
   };
 
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           onConfirm={errorHandler}
@@ -72,7 +73,7 @@ const AddUser = (props) => {
           <Button type='submit'>Add User</Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 
